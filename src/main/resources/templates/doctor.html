@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <title>Doctor Secret Room</title>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<header>Header TODO</header>
-<section>
-    <h1>Welcome $doctorname</h1>
-    <h3>Your number is $doctornumber</h3>
-</section>
-<footer>Footer TODO</footer>
+    <head th:replace ="fragments/header :: top"></head>
+    <section>
+
+        <h1>Welcome <span th:text="${doctorname}"></span></h1>
+        <h3>Your number is <span th:text="${doctornumber}"></span></h3>
+
+    </section>
+
+
+
+
+    <footer th:replace="fragments/footer :: footer"></footer>
+
+
 </body>
+
 </html>
